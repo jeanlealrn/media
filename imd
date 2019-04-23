@@ -1,0 +1,52 @@
+escreva "Digite a nota de TI:"
+var ti := leia_numero
+escreva "Digite a nota de Matemática:"
+var mat := leia_numero
+escreva "Digite a nota de Inglês:"
+var ing := leia_numero
+escreva "Digite a nota de Sistemas:"
+var so := leia_numero
+escreva "Digite a nota de Arquitetura:"
+var arq := leia_numero
+escreva "Digite a nota de Lógica:"
+var log := leia_numero
+
+
+var media = (ti*60+mat*40+ing*40+so*60+arq*20+log*60)/280 
+
+var estado := verdadeiro
+se media >= 5 então
+	se ti<3 então
+      escreva "aluno em recuperação em TI"
+      estado := falso
+    fim
+    se mat<3 então
+      escreva "aluno em recuperação em Matemática"
+       estado := falso
+    fim
+    se ing<3 então
+      escreva "aluno em recuperação em Inglês"
+       estado := falso
+    fim
+    se so<3 então
+      escreva "aluno em recuperação em Sistemas"
+       estado := falso
+    fim
+    se arq<3 então
+      escreva "aluno em recuperação em Arquitetura"
+       estado := falso
+    fim
+    se log<3 então
+      escreva "aluno em recuperação em Lógica"
+       estado := falso
+    fim
+    
+    se estado == falso então
+    escreva "aluno em Recuperação"
+    senão 
+    escreva "aluno Aprovado"
+    fim
+    
+senão
+	escreva "aluno Reprovado"
+fim
